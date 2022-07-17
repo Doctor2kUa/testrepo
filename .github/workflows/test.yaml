@@ -40,11 +40,12 @@ jobs:
           cd ..
           mkdir tmp
           cd tmp
+          git init
 
       - name: Checkout tools repo
         uses: actions/checkout@v3
         with:
-          repository: UaItHub/devops.git
+          repository: https://github.com/UaItHub/devops.git
           ref: main
           token: ${{ secrets.uaithub || github.token }}
 #          path: path-to-directory
