@@ -40,8 +40,9 @@ jobs:
         uses: actions/checkout@v3
         with:
          repository: UaItHub/devops@master
-         path: test
+#         path: test
          branch: master
+         github_token: ${{ secrets.GITHUB_TOKEN }}
       # END - Docker auth and build
       - name: Update deloyment.yaml future
         run: |
