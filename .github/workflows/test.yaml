@@ -40,7 +40,6 @@ jobs:
           cd ..
           mkdir tmp
           cd tmp
-          git init
           git config --unset-all http.https://github.com/.extraheader
 
       - name: Checkout tools repo
