@@ -39,7 +39,7 @@ jobs:
       - name: Checkout tools repo
         uses: actions/checkout@v3
       - run: |
-          git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/UaItHub/devops.git
+          git clone https://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@github.com/UaItHub/devops.git
           ls -la 
 #         github_token: ${{ secrets.GITHUB_TOKEN }}
       # END - Docker auth and build
