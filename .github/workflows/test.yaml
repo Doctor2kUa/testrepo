@@ -39,7 +39,7 @@ jobs:
       - name: Checkout tools repo
         uses: actions/checkout@v3
         with:
-          repository: UaItHub/devops
+          repository: UaItHub/devops.git
           ref: main
           token: ${{ secrets.uaithub || github.token }}
 #          path: path-to-directory
