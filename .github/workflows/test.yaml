@@ -41,6 +41,7 @@ jobs:
         with:
          repository: UaItHub/devops@master
          path: test
+         github-token: ${{ github.token }} 
       # END - Docker auth and build
       - name: Update deloyment.yaml future
         run: |
