@@ -37,7 +37,7 @@ jobs:
         run: echo ${IMAGE_NAME}_${GITHUB_REF##*/}
         
       - name: Checkout tools repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
 #         repository: UaItHub/devops@master
          repository: UaItHub/devops
