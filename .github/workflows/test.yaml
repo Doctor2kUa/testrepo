@@ -39,9 +39,10 @@ jobs:
       - name: Checkout tools repo
         uses: actions/checkout@v3
         with:
-         repository: UaItHub/devops@master
+#         repository: UaItHub/devops@master
+         repository: UaItHub/devops
 #         path: test
-         branch: master
+         branch: main
          github_token: ${{ secrets.GITHUB_TOKEN }}
       # END - Docker auth and build
       - name: Update deloyment.yaml future
