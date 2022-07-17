@@ -39,7 +39,7 @@ jobs:
       - name: Checkout tools repo
         uses: actions/checkout@v3
         with:
-         repository: UaItHub/devops
+         repository: UaItHub/devops@master
          path: test
       # END - Docker auth and build
       - name: Update deloyment.yaml future
