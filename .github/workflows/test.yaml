@@ -37,9 +37,6 @@ jobs:
         run: echo ${IMAGE_NAME}_${GITHUB_REF##*/}
 
       - run: |
-          cd ..
-          mkdir tmp
-          cd tmp
           git config --unset-all http.https://github.com/.extraheader
 
       - name: Checkout tools repo
