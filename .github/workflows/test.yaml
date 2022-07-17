@@ -36,25 +36,21 @@ jobs:
       - id: step5
         run: echo ${IMAGE_NAME}_${GITHUB_REF##*/}
 
-      - run: |
-          git config --unset-all http.https://github.com/.extraheader
+      - name: Clone supercharge website repository
+        uses: actions/checkout@v2
 
-      - name: Checkout tools repo
-        uses: actions/checkout@v3
+    # This part here is cloning a second repository
+    # While cloning the repository:
+    #   - it clones the repo into the given `path`
+    #   - it checks out the branch defined at `ref`
+      - name: Clone supercharge docs repository
+        uses: actions/checkout@v2
         with:
-          repository: UaItHub/devops.git
-          ref: main
-          token: ${{ secrets.uaithub || github.token }}
-#          path: path-to-directory
- #     - name: Checkout private tools
- #       uses: actions/checkout@v3
-  #      with:
-   #       repository: my-org/my-private-tools
-    #      token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-     #     path: my-tools
-      - run: ls -la 
-##          git clone https://${{ secrets.uaithub }}@github.com/UaItHub/devops.git
-             
+          repository: supercharge/docs
+          path: resources/docs/2.x
+          ref: 2.x
+
+
 ##         github_token: ${{ secrets.GITHUB_TOKEN }}
       # END - Docker auth and build
       - name: Update deloyment.yaml future
