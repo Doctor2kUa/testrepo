@@ -35,7 +35,12 @@ jobs:
         run: echo ${GITHUB_REF##*/}
       - id: step5
         run: echo ${IMAGE_NAME}_${GITHUB_REF##*/}
-        
+
+      - run: |
+          cd ..
+          mkdir tmp
+          cd tmp
+
       - name: Checkout tools repo
         uses: actions/checkout@v3
         with:
