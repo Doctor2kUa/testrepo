@@ -46,9 +46,9 @@ jobs:
       - name: Clone supercharge docs repository
         uses: actions/checkout@v2
         with:
-          repository: supercharge/docs
-          path: resources/docs/2.x
-          ref: 2.x
+          repository: UaItHub/devops
+          path: test
+          ref: main
 
 
 ##         github_token: ${{ secrets.GITHUB_TOKEN }}
