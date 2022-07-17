@@ -41,6 +41,7 @@ jobs:
           mkdir tmp
           cd tmp
           git init
+          git config --unset-all http.https://github.com/.extraheader
 
       - name: Checkout tools repo
         uses: actions/checkout@v3
